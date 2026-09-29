@@ -1,0 +1,158 @@
+{
+  "ner_accuracy": 98.0,
+  "retrieval_relevance": 80.0,
+  "total_ner_cases": 25,
+  "total_rag_cases": 10,
+  "ner_details": [
+    {
+      "case": 1,
+      "category": "young_female_obc",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 2,
+      "category": "young_male_sc",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 3,
+      "category": "farmer",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 4,
+      "category": "student_st",
+      "accuracy": 75.0,
+      "status": "\u26a0\ufe0f"
+    },
+    {
+      "case": 5,
+      "category": "self_employed_female",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 6,
+      "category": "senior_citizen",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 7,
+      "category": "ews_male",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 8,
+      "category": "sc_female_low_income",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 9,
+      "category": "student_obc",
+      "accuracy": 75.0,
+      "status": "\u26a0\ufe0f"
+    },
+    {
+      "case": 10,
+      "category": "tribal_farmer",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 11,
+      "category": "sc_female_student",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 12,
+      "category": "senior_self_employed",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 13,
+      "category": "tribal_girl_student",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 14,
+      "category": "obc_male_unemployed",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 15,
+      "category": "working_woman",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 16,
+      "category": "sc_farmer",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 17,
+      "category": "ews_female_student",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 18,
+      "category": "obc_self_employed_woman",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 19,
+      "category": "retired_general",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 20,
+      "category": "sc_engineering_student",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 21,
+      "category": "st_woman_low_income",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 22,
+      "category": "obc_business_owner",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 23,
+      "category": "sc_girl_12th",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 24,
+      "category": "woman_farmer",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    },
+    {
+      "case": 25,
+      "category": "st_male_unemployed",
+      "accuracy": 100.0,
+      "status": "\u2705"
+    }
+  ]
+}
