@@ -1,3 +1,5 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
 langchain==0.2.17
 langchain-community==0.2.19
 langchain-groq==0.1.9
@@ -5,7 +7,7 @@ langchain-text-splitters==0.2.4
 langchain-core==0.2.43
 chromadb==0.5.23
 sentence-transformers==3.0.1
-torch==2.3.1
+torch==2.3.1+cpu
 fastapi==0.115.0
 uvicorn==0.30.6
 spacy==3.7.6
