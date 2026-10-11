@@ -5,7 +5,7 @@ langchain-community==0.2.19
 langchain-groq==0.1.9
 langchain-text-splitters==0.2.4
 langchain-core==0.2.43
-chromadb==0.5.23
+chromadb==1.5.9
 sentence-transformers==3.0.1
 torch==2.3.1+cpu
 fastapi==0.115.0
@@ -14,3 +14,4 @@ spacy==3.7.6
 pandas==2.2.3
 python-dotenv==1.0.1
 streamlit==1.38.0
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl

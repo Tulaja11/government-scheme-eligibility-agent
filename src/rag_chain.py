@@ -6,12 +6,33 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import os
+import shutil
+from functools import lru_cache
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
 
-CHROMA_PATH = os.path.join(os.path.dirname(__file__), "..", "chroma_db")
+
+def _resolve_chroma_path():
+    """
+    Locally: use ../chroma_db.
+    On Azure: CHROMA_SOURCE points to the uploaded DB (/home/data/chroma_db).
+    It is copied once to local disk (/tmp) because SQLite can be unreliable
+    on Azure's network-mounted /home folder.
+    """
+    source = os.environ.get("CHROMA_SOURCE")
+    if not source:
+        return os.path.join(os.path.dirname(__file__), "..", "chroma_db")
+
+    local_copy = "/tmp/chroma_db"
+    if not os.path.exists(os.path.join(local_copy, "chroma.sqlite3")):
+        shutil.rmtree(local_copy, ignore_errors=True)
+        shutil.copytree(source, local_copy)
+    return local_copy
+
+
+CHROMA_PATH = _resolve_chroma_path()
 
 ELIGIBILITY_PROMPT = PromptTemplate(
     input_variables=["context", "profile", "question"],
@@ -43,8 +64,9 @@ If no schemes match, say so honestly.
 )
 
 
+@lru_cache(maxsize=1)
 def get_vectorstore():
-    """Load the existing ChromaDB vector store."""
+    """Load the existing ChromaDB vector store (cached: loads only once)."""
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     return Chroma(persist_directory=CHROMA_PATH, embedding_function=embeddings)
 
